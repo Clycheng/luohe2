@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import '@/assets/js/jquery.min.js'
+// import fullpage from '@/assets/js/fullpage.easing.js'
 // import '@/assets/js/bootstrap.min.js'
 // import '@/assets/js/jquery.fullPage.min.js'
 // import '@/assets/js/fullpage.easing.js'
@@ -12,6 +12,7 @@ import router from './router'
 // import '@/assets/js/jquery.min.js'
 
 Vue.config.productionTip = false
+// Vue.prototype.fullpage = fullpage
 
 /* eslint-disable no-new */
 new Vue({

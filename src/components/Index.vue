@@ -14,15 +14,21 @@
     </ul> -->
     <loading></loading>
     <Header></Header>
-    
+    <Banner></Banner>
+    <Service></Service>
   </div>
  
 </template>
 
 <script>
 import $ from "jquery"
-import Loading from "@/components/Loading"
-import Header from "@/components/Header"
+// import fullPage from "@/assets/js/fullpage.seaing.js"
+import Loading from "@/components/child/Loading"
+import Header from "@/components/child/Header"
+import Banner from "@/components/Banner"
+import About from "@/components/About"
+import Service from "@/components/Service"
+// import { constants } from 'http2';
 export default {
   name: 'Index',
   data () {
@@ -33,30 +39,72 @@ export default {
   },
   components:{
     Loading:Loading,
-     Header:Header
+     Header:Header,
+     Banner:Banner,
+     About:About,
+     Service:Service
   },
   mounted:function(){
+    
     // console.log(this.components.Header)
-  }
+  },
+  methods:{
+    fullPage:function(){
+      // this.test_log()
+    }
+}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 @import "../assets/css/animate注释.css";
-/* @import "../assets/css/bootstrap.min.css"; */
-h1, h2 {
-  font-weight: normal;
+@import "../assets/css/bootstrap.min.css";
+@import "../assets/css/font-awesome.min.css";
+@import "../assets/css/jquery.fullPage.css";
+body{
+    user-select: none;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+a:hover{
+    text-decoration: none;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.bg{
+    background: no-repeat center;
+    background-size: cover;
 }
-a {
-  color: #42b983;
+.fs20{
+    font-size: 20px;
+}
+.line-bg{
+    height: 32px;
+    background: url("../assets/img/shiguang_splitter.png") no-repeat center;
+    margin: 30px 0 50px;
+    text-align: center;
+}
+.title{
+    font-size: 30px;
+    text-align: center;
+    color: #eee;
+    font-family: lingxin,'Microsoft Yahei','YaHei WebFont',Verdana,Geneva,Tahoma,sans-serif,'宋体';
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 160px;
+}
+.title span{
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 1.2em;
+    color: #00c2ff;
+    font-family: lingxin,'Microsoft Yahei','YaHei WebFont',Verdana,Geneva,Tahoma,sans-serif,'宋体';
+    font-weight: bold;
+    font-style: italic;
+}
+/*.collapse{*/
+    /*display: none;*/
+/*}*/
+@media screen and (max-width: 790px){
+    .fs20 {
+        font-size: 14px;
+    }
 }
 </style>
