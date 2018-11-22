@@ -17,12 +17,12 @@
         <nav class="collapse navbar-collapse">
             <!--nav/-->
             <ul class="nav navbar-nav" id="menu">
-                <li data-menuanchor="page1" class="active"><a href="">首页</a></li>
+                <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
                 <li data-menuanchor="page2"><a href="">关于</a></li>
-                <li data-menuanchor="page3"><a href="/Service" router-link="/Service"><router-link to="/Service">服务</router-link></a></li>
+                <li data-menuanchor="page3"><router-link to="/Service">服务</router-link></li>
                 <li data-menuanchor="page4"><a href="">方案</a></li>
                 <li data-menuanchor="page5"><a href="">客户</a></li>
-                <li data-menuanchor="page6"><a href="">联系</a></li>
+                <li data-menuanchor="page6"><a href="page7">联系</a></li>
             </ul>
             <!--phone-->
             <a href="//tel:400-6650-351" class="navbar-right phone" title="全国统一客服热线400-6650-351" data-toggle="tooltip" data-placement="bottom">

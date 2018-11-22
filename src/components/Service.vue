@@ -51,11 +51,11 @@
     
 <script>
 export default {
-
+    name:"Service"
 }
 </script>
 
-<style scoped>
+<style>
 .service{
     background-image: url('../assets/img/banner11.jpg');
 }

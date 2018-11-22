@@ -15,15 +15,15 @@
 </template>
 
 <script>
-require("../assets/js/jquery.min.js")
-require("../assets/js/bootstrap.min.js")
-require("../assets/js/jquery.fullPage.js")
-require("../assets/js/jquery.fullPage.min.js")
-require("../assets/js/fullpage.easing.js")
-// require("../assets/js/jquery-1.8.3.min.js")
-require("../assets/js/wow.min.js")
-require("../assets/js/index.js")
-// import $ from "../assets/js/jquery.min.js"
+require("../../assets/js/jquery.min.js")
+require("../../assets/js/bootstrap.min.js")
+require("../../assets/js/jquery.fullPage.js")
+require("../../assets/js/jquery.fullPage.min.js")
+require("../../assets/js/fullpage.easing.js")
+// require("../../assets/js/jquery-1.8.3.min.js")
+require("../../assets/js/wow.min.js")
+require("../../assets/js/index.js")
+// import $ from "../../assets/js/jquery.min.js"
 // import fullPage from "@/assets/js/fullpage.seaing.js"
 import Loading from "@/components/child/Loading"
 import Header from "@/components/child/Header"
@@ -36,7 +36,7 @@ import Contact from "@/components/Contact"
 import Modal from "@/components/Modal"
 // import { constants } from 'http2';
 export default {
-  name: 'Index',
+  name: 'PageOne',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -59,12 +59,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
-@import "../assets/css/animate注释.css";
-@import "../assets/css/bootstrap.min.css";
-@import "../assets/css/font-awesome.min.css";
-@import "../assets/css/jquery.fullPage.css";
-@import "../assets/css/index.css";
-@import "../assets/css/loading.css";
+@import "../../assets/css/animate注释.css";
+@import "../../assets/css/bootstrap.min.css";
+@import "../../assets/css/font-awesome.min.css";
+@import "../../assets/css/jquery.fullPage.css";
+@import "../../assets/css/index.css";
+@import "../../assets/css/loading.css";
 body{
     user-select: none;
 }
@@ -80,7 +80,7 @@ a:hover{
 }
 .line-bg{
     height: 32px;
-    background: url("../assets/img/shiguang_splitter.png") no-repeat center;
+    background: url("../../assets/img/shiguang_splitter.png") no-repeat center;
     margin: 30px 0 50px;
     text-align: center;
 }
