@@ -1,19 +1,18 @@
 <template>
 <div>
     <Loading></Loading>
-    <Header></Header>
+    <Header v-on:callBack="Back" :Page="isOK"></Header>
       <main id = "dowebok">
-        <Banner></Banner>
-        <About></About>
-        <Service></Service>
-        <Case></Case>
-        <Customer></Customer>
-        <Contact></Contact>
+        <Banner  ></Banner>
+        <About :class="isOK?'page2':'active'"></About>
+        <Service :class="isOK?'page3':'active'"></Service>
+        <Case :class="isOK?'page4':'active'"></Case>
+        <Customer :class="isOK?'page5':'active'"></Customer>
+        <Contact :class="isOK?'page6':'active'"></Contact>
       </main>
     <Modal></Modal>
  </div>
 </template>
-
 <script>
 require("../assets/js/jquery.min.js")
 require("../assets/js/bootstrap.min.js")
@@ -39,7 +38,8 @@ export default {
   name: 'Index',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      isOK:"",
+       scrolled: false
       
     }
   },
@@ -53,7 +53,14 @@ export default {
      Customer:Customer,
      Contact:Contact,
      Modal:Modal
-  }
+  },
+methods: {
+    Back:function(e){
+      this.isOK = e;
+      console.log(this.isOK)
+    }
+},
+
 }
 </script>
 

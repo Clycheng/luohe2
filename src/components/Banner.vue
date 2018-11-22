@@ -1,6 +1,6 @@
 
 <template>
-    <section class="section bg home">
+    <section class="section bg home" >
         <div class="carousel slide" id="slide">
             <div class="carousel-inner">
                 <div class="item bg active">
@@ -60,7 +60,20 @@
 <script>
 
 export default {
-    name:"Banner"
+    name:"Banner",
+    data(){
+        return {
+            isOK:"page1"
+        }
+    },
+    mounted(e){
+        this.init()
+    },
+    methods:{
+        init(){
+            console.log(location.href)
+        }
+    }
 }
 </script>
 

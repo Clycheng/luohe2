@@ -17,12 +17,12 @@
         <nav class="collapse navbar-collapse">
             <!--nav/-->
             <ul class="nav navbar-nav" id="menu">
-                <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
-                <li data-menuanchor="page2"><a href="">关于</a></li>
-                <li data-menuanchor="page3"><router-link to="/Service">服务</router-link></li>
-                <li data-menuanchor="page4"><a href="">方案</a></li>
-                <li data-menuanchor="page5"><a href="">客户</a></li>
-                <li data-menuanchor="page6"><a href="page7">联系</a></li>
+                <li data-menuanchor="page1" :class="this.Page?'active':'page1'" @click="sendMsg('page1')" ><router-link to="">首页</router-link></li>
+                <li data-menuanchor="page2" :class="this.Page?'active':'page2'" @click="sendMsg('page2')"><router-link to="">关于</router-link></li>
+                <li data-menuanchor="page3" @click="sendMsg('page3')"><router-link to="">服务</router-link></li>
+                <li data-menuanchor="page4" @click="sendMsg('page4')"><router-link to="">方案</router-link></li>
+                <li data-menuanchor="page5" @click="sendMsg('page5')"><router-link to="">客户</router-link></li>
+                <li data-menuanchor="page6" @click="sendMsg('page6')"><router-link to="">联系</router-link></li>
             </ul>
             <!--phone-->
             <a href="//tel:400-6650-351" class="navbar-right phone" title="全国统一客服热线400-6650-351" data-toggle="tooltip" data-placement="bottom">
@@ -37,9 +37,17 @@
 <script>
 export default {
     name:"Header",
+    props:["Page"],
     data(){
         return{
-            message:"123"
+            pageNum:[1,2,3,4,5,6,],
+            isOk:""
+        }
+    },
+    methods:{
+        sendMsg:function(e){
+           this.isOk=this.Page;
+            this.$emit('callBack',e)
         }
     }
 }
